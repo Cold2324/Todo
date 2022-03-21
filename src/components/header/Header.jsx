@@ -1,16 +1,12 @@
 import React from 'react'
 import '../../sass/header/header.scss'
-function Header() {
+function Header({ children }) {
   return (
     <header>
       <div className="header--topbar"></div>
       <div className="header--search-container">
         <div id="header--search-subcontainer">
-          <input
-            type="search"
-            id='header--search'
-            placeholder='search...'
-          />
+          {children}
         </div>
       </div>
     </header>
