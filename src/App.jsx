@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { Header, Body, TaskItem, InputSearch } from './components/index'
+import { Header, Body, TaskItem, InputSearch, NotTasks } from './components/index'
 import { v4 as uuid } from 'uuid'
 
 function App() {
   const [tasks, setTasks] = useState([
-    { text: 'Terminar el curso de platzi', completed: false },
-    { text: 'Hacer la comida', completed: false }
   ])
   const [searchValue, setSearchValue] = useState('')
   let searchedTasks = []
@@ -30,15 +28,19 @@ function App() {
           setSearchValue={setSearchValue}
         />
       </Header>
-      <Body>
-        <div className="body--tasks-containter">
-          {
-            searchedTasks.map(task => (
-              <TaskItem task={task} />
-            ))
-          }
-        </div>
-      </Body>
+      {
+        tasks.length === 0
+          ? <NotTasks />
+          : <Body>
+            <div className="body--tasks-containter">
+              {
+                searchedTasks.map(task => (
+                  <TaskItem key={task.id} task={task} />
+                ))
+              }
+            </div>
+          </Body>
+      }
     </>
   );
 }
