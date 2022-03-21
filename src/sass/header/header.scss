@@ -1,0 +1,34 @@
+@import "../colors/light.scss";
+
+.header--topbar {
+  width: 100%;
+  height: 15px;
+  background-color: $black-red;
+}
+
+.header--search-container {
+  width: 100%;
+  height: 100px;
+  background-color: $red;
+}
+
+#header--search-subcontainer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header--search {
+  padding: 10px;
+  outline: none;
+  background-color: $red-rose;
+  color: $brown-red;
+  width: 90%;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

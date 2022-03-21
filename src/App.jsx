@@ -1,11 +1,12 @@
-import { ThemeProvider } from "styled-components";
+import React from "react";
+import { Header } from './components/index'
+
 function App() {
   return (
-    <React.Fragment>
-      <ThemeProvider>
+    <>
+      <Header />
 
-      </ThemeProvider>
-    </React.Fragment>
+    </>
   );
 }
 
