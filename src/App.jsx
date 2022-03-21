@@ -1,8 +1,11 @@
-
+import { ThemeProvider } from "styled-components";
 function App() {
   return (
-    <div className="App">
-    </div>
+    <React.Fragment>
+      <ThemeProvider>
+
+      </ThemeProvider>
+    </React.Fragment>
   );
 }
 
