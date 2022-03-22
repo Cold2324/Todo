@@ -2,13 +2,22 @@ import React from 'react'
 import deleteIcon from '../../assets/icons/delete.svg'
 import check from '../../assets/icons/check.svg'
 
-function TaskItem({ task }) {
+function TaskItem({ task, onCheck }) {
   return (
     <div className="body--task-item">
       <p className="body--task-content">
-        <img src={check} className="body--task-icon-check" />
-        <span>{task.text}</span>
-        <img src={deleteIcon} className="body--task-icon-delete" />
+        <img
+          src={check}
+          className="body--task-icon-check"
+          onClick={onCheck}
+        />
+        <span>
+          {task.text}
+        </span>
+        <img
+          src={deleteIcon}
+          className="body--task-icon-delete"
+        />
       </p>
     </div>
   )

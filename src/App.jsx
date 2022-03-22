@@ -22,6 +22,15 @@ function App() {
     })
   }
 
+  const onCheck = id => {
+    // capturar la task, luego cambiar el estado de ese objeto en su propiedad completed
+    const i = tasks.findIndex(task => task.id === id)
+    const newTodos = [...tasks]
+    newTodos[i].completed = true
+    setTasks(newTodos)
+    console.log(tasks)
+  }
+
   return (
     <>
       <Header>
@@ -38,7 +47,11 @@ function App() {
             <div className="body--tasks-containter">
               {
                 searchedTasks.map(task => (
-                  <TaskItem key={task.id} task={task} />
+                  <TaskItem
+                    key={task.id}
+                    task={task}
+                    onCheck={() => onCheck(task.id)}
+                  />
                 ))
               }
             </div>
