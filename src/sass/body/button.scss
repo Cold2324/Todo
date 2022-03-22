@@ -1,0 +1,32 @@
+@import "../colors/light.scss";
+
+.button--container > button {
+  position: fixed;
+  padding: 20px 30px;
+  bottom: 50px;
+  right: 50px;
+  background-color: $red;
+  color: $red-rose;
+  font-size: 40px;
+  border: none;
+
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: 0.3s ease-in;
+  -webkit-transition: 0.3s ease-in;
+  -moz-transition: 0.3s ease-in;
+  -ms-transition: 0.3s ease-in;
+  -o-transition: 0.5s ease-in;
+
+  &:hover {
+    cursor: pointer;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}
