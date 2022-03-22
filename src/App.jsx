@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Header, Body, TaskItem, InputSearch, NotTasks, Button, Modal } from './components/index'
+import { Header, Body, TaskItem, InputSearch, NotTasks, Button, Modal, CreateTask } from './components/index'
 import useLocalStorage from './hooks/useLocalStorage'
 import { v4 as uuid } from 'uuid'
 
 function App() {
   const [tasks, setTasks] = useLocalStorage('Tasks', [])
   const [searchValue, setSearchValue] = useState('')
+  const [openModal, setOpenModal] = useState(false)
   let searchedTasks = []
 
   if (!searchValue.length >= 1) {
@@ -21,16 +22,16 @@ function App() {
 
   const onCheck = id => {
     const i = tasks.findIndex(task => task.id === id)
-    const newTodos = [...tasks]
-    newTodos[i].completed = !tasks[i].completed
-    setTasks(newTodos)
+    const newTasks = [...tasks]
+    newTasks[i].completed = !tasks[i].completed
+    setTasks(newTasks)
   }
 
   const onDelete = id => {
     const i = tasks.findIndex(task => task.id === id)
-    const newTodos = [...tasks]
-    newTodos.splice(i, 1)
-    setTasks(newTodos)
+    const newTasks = [...tasks]
+    newTasks.splice(i, 1)
+    setTasks(newTasks)
   }
 
   return (
@@ -61,11 +62,19 @@ function App() {
           </Body>
       }
 
-      <Modal>
+      {
+        !!openModal && (
+          <Modal>
+            <CreateTask
+            />
+          </Modal>
+        )
+      }
 
-      </Modal>
-
-      <Button />
+      <Button
+        openModal={openModal}
+        setOpenModal={setOpenModal}
+      />
     </>
   );
 }
