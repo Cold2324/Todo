@@ -10,14 +10,14 @@ function TaskItem({ task, onCheck, onDelete }) {
           src={check}
           className="body--task-icon-check"
           onClick={onCheck}
-          alt="check image"
+          alt="check"
         />
         <span>{task.text}</span>
         <img
           src={deleteIcon}
           className="body--task-icon-delete"
           onClick={onDelete}
-          alt="delete image"
+          alt="delete"
         />
       </p>
     </div>
