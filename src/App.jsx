@@ -23,12 +23,17 @@ function App() {
   }
 
   const onCheck = id => {
-    // capturar la task, luego cambiar el estado de ese objeto en su propiedad completed
     const i = tasks.findIndex(task => task.id === id)
     const newTodos = [...tasks]
     newTodos[i].completed = !tasks[i].completed
     setTasks(newTodos)
-    console.log(tasks)
+  }
+
+  const onDelete = id => {
+    const i = tasks.findIndex(task => task.id === id)
+    const newTodos = [...tasks]
+    newTodos.splice(i, 1)
+    setTasks(newTodos)
   }
 
   return (
@@ -51,6 +56,7 @@ function App() {
                     key={task.id}
                     task={task}
                     onCheck={() => onCheck(task.id)}
+                    onDelete={() => onDelete(task.id)}
                   />
                 ))
               }
