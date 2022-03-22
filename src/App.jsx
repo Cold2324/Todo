@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Header, Body, TaskItem, InputSearch, NotTasks, Button } from './components/index'
+import { Header, Body, TaskItem, InputSearch, NotTasks, Button, Modal } from './components/index'
 import useLocalStorage from './hooks/useLocalStorage'
 import { v4 as uuid } from 'uuid'
 
@@ -60,6 +60,11 @@ function App() {
             </div>
           </Body>
       }
+
+      <Modal>
+
+      </Modal>
+
       <Button />
     </>
   );
