@@ -34,6 +34,16 @@ function App() {
     setTasks(newTasks)
   }
 
+  const onAdd = text => {
+    const newTasks = [...tasks]
+    newTasks.push({
+      id: uuid(),
+      text: text,
+      completed: false
+    })
+    setTasks(newTasks)
+  }
+
   return (
     <>
       <Header>
@@ -66,6 +76,8 @@ function App() {
         !!openModal && (
           <Modal>
             <CreateTask
+              setOpenModal={setOpenModal}
+              onAdd={onAdd}
             />
           </Modal>
         )
