@@ -6,7 +6,11 @@ function TaskItem({ task, onCheck }) {
   return (
     <div className={!task.completed ? 'body--task-item' : 'body--task-item-check'} >
       <p className="body--task-content">
-        <img src={check} className="body--task-icon-check" />
+        <img
+          src={check}
+          className="body--task-icon-check"
+          onClick={onCheck}
+        />
         <span>{task.text}</span>
         <img src={deleteIcon} className="body--task-icon-delete" />
       </p>

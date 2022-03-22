@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid'
 
 function App() {
   const [tasks, setTasks] = useState([
-    { id: uuid(), text: 'Terminar la app todo', completed: true },
+    { id: uuid(), text: 'Terminar la app todo', completed: false },
     { id: uuid(), text: 'Asistir a las clases', completed: false },
     { id: uuid(), text: 'Crear una nueva repo', completed: false }
   ])
@@ -26,7 +26,7 @@ function App() {
     // capturar la task, luego cambiar el estado de ese objeto en su propiedad completed
     const i = tasks.findIndex(task => task.id === id)
     const newTodos = [...tasks]
-    newTodos[i].completed = true
+    newTodos[i].completed = !tasks[i].completed
     setTasks(newTodos)
     console.log(tasks)
   }
