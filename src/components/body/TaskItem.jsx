@@ -5,7 +5,7 @@ import check from '../../assets/icons/check.svg'
 function TaskItem({ task, onCheck }) {
   return (
     <div className="body--task-item">
-      <p className="body--task-content">
+      <p className="">
         <img
           src={check}
           className="body--task-icon-check"
