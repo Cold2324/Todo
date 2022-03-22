@@ -4,7 +4,7 @@ import check from '../../assets/icons/check.svg'
 
 function TaskItem({ task }) {
   return (
-    <div className="body--task-item">
+    <div className={!task.completed ? 'body--task-item' : 'body--task-item-check'} >
       <p className="body--task-content">
         <img src={check} className="body--task-icon-check" />
         <span>{task.text}</span>

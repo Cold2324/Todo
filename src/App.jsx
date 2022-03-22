@@ -4,7 +4,7 @@ import { v4 as uuid } from 'uuid'
 
 function App() {
   const [tasks, setTasks] = useState([
-    { id: uuid(), text: 'Terminar la app todo', completed: false },
+    { id: uuid(), text: 'Terminar la app todo', completed: true },
     { id: uuid(), text: 'Asistir a las clases', completed: false },
     { id: uuid(), text: 'Crear una nueva repo', completed: false }
   ])
