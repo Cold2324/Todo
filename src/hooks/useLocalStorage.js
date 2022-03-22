@@ -8,7 +8,7 @@ function useLocalStorage(name, initialValue) {
 
     let parsedItems
 
-    if (!localStorageItems.length >= 1) {
+    if (!localStorageItems) {
       localStorage.setItem(name, JSON.stringify(initialValue))
       parsedItems = initialValue
     } else {
