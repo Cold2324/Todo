@@ -4,20 +4,11 @@ import check from '../../assets/icons/check.svg'
 
 function TaskItem({ task, onCheck }) {
   return (
-    <div className="body--task-item">
-      <p className="">
-        <img
-          src={check}
-          className="body--task-icon-check"
-          onClick={onCheck}
-        />
-        <span>
-          {task.text}
-        </span>
-        <img
-          src={deleteIcon}
-          className="body--task-icon-delete"
-        />
+    <div className={!task.completed ? 'body--task-item' : 'body--task-item-check'} >
+      <p className="body--task-content">
+        <img src={check} className="body--task-icon-check" />
+        <span>{task.text}</span>
+        <img src={deleteIcon} className="body--task-icon-delete" />
       </p>
     </div>
   )
