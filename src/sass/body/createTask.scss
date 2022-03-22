@@ -1,0 +1,84 @@
+@import "../colors/light.scss";
+
+.Modal--create-task-container {
+  background: rgba(32, 35, 41, 0.8);
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.Modal--create-task-form {
+  padding: 20px;
+  background-color: $red;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.Modal--create-task-form > p {
+  font-size: 40px;
+  color: $red-rose;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.Modal--create-task-form > textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  outline: none;
+  resize: none;
+  background-color: $red-rose;
+  margin-bottom: 1rem;
+  color: $brown-red;
+}
+
+.Modal--create-task-form-button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Modal--create-task-button {
+  padding: 20px;
+  position: relative;
+  border: 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+
+  transition: 0.3s ease-in;
+  -webkit-transition: 0.3s ease-in;
+  -moz-transition: 0.3s ease-in;
+  -ms-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+
+  &:nth-child(even) {
+    background-color: $red-rose;
+    color: $brown-red;
+    box-shadow: 0px 5px #ffebeeb6;
+  }
+  &:nth-child(odd) {
+    background-color: $brown-red;
+    color: $red-rose;
+    box-shadow: 0px 5px #663736b6;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

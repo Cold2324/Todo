@@ -1,4 +1,5 @@
 import ReactDom from "react-dom";
+import '../../sass/body/createTask.scss'
 
 function Modal({ children }) {
   return ReactDom.createPortal(
