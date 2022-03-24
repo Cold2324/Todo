@@ -12,7 +12,7 @@ If you have Linux or MacOS, I recommend use nvm
 ## Quick start 🚀
 
 ```
-git clone git@github.com:Killer2324/Weather-App.git
+git clone git@github.com:Killer2324/Todo.git
 ```
 
 Install dependencies Npm
