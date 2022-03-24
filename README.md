@@ -32,6 +32,7 @@ yarn install
 - [Reactjs](https://reactjs.org/)
 - [create-react-app](https://create-react-app.dev/)
 - [sass](https://sass-lang.com/)
-- [openweathermap](https://openweathermap.org/)
+- [uuid](https://www.npmjs.com/package/uuid)
 - [yarn](https://yarnpkg.com/)
+- [gh-pages](https://www.npmjs.com/package/gh-pages)
 - [visual studio code](https://code.visualstudio.com/)
