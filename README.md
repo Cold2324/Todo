@@ -2,7 +2,7 @@
 
 ## Pre requirements
 
-### Node<br/>
+### Node
 
 If you have Linux or MacOS, I recommend use nvm
 
@@ -11,28 +11,16 @@ If you have Linux or MacOS, I recommend use nvm
 
 ## Quick start 🚀
 
-```
-git clone git@github.com:Killer2324/Todo.git
-```
-
-Install dependencies Npm
-
-```
-npm install
-```
-
-Install dependencies Yarn
-
-```
-yarn install
+```bash
+pnpm i
 ```
 
 ## Technologies 🛠️
 
-- [Reactjs](https://reactjs.org/)
-- [create-react-app](https://create-react-app.dev/)
+- [Vite](https://vitejs.dev/)
+- [React](https://reactjs.org/)
+- [Pnpm](https://pnpm.io/)
 - [sass](https://sass-lang.com/)
 - [uuid](https://www.npmjs.com/package/uuid)
-- [yarn](https://yarnpkg.com/)
 - [gh-pages](https://www.npmjs.com/package/gh-pages)
 - [visual studio code](https://code.visualstudio.com/)
