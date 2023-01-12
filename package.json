@@ -1,46 +1,32 @@
 {
   "name": "todo-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "homepage": "http://Killer2324.github.io/Todo",
   "dependencies": {
-    "@testing-library/jest-dom": "5.14.1",
-    "@testing-library/react": "12.0.0",
-    "@testing-library/user-event": "13.2.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-scripts": "5.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "sass": "1.49.9",
     "uuid": "8.3.2",
-    "web-vitals": "2.1.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "vite": "4.0.4"
   },
   "devDependencies": {
-    "gh-pages": "3.2.3"
+    "eslint": "8.31.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.32.0",
+    "gh-pages": "4.0.0",
+    "prettier": "2.8.2"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --fix . --ext .js,.jsx",
+    "format": "prettier --write .",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   }
 }
