@@ -1,7 +1,7 @@
 env:
   browser: true
   es2021: true
-settings: { react: { version: "detect" } }
+settings: { react: { version: 'detect' } }
 extends:
   - plugin:react/recommended
   - standard
@@ -14,7 +14,7 @@ plugins:
   - react
 rules:
   {
-    "react/react-jsx-in-scope": "off",
-    "no-unused-vars": "warn",
-    "react/prop-types": "off",
+    'react/react-in-jsx-scope': 'off',
+    'no-unused-vars': 'warn',
+    'react/prop-types': 'off',
   }
