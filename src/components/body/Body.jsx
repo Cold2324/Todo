@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../sass/body/body.scss'
+import './body.scss'
 function Body({ children }) {
   return <section>{children}</section>
 }

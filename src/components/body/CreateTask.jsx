@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../sass/body/createTask.scss'
+import './createTask.scss'
 function CreateTask({ setOpenModal, onAdd }) {
   const [textValue, setTextValue] = React.useState('')
 

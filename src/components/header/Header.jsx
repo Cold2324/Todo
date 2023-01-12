@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../sass/header/header.scss'
+import './header.scss'
 function Header({ children }) {
   return (
     <header>

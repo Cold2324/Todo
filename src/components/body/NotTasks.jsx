@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../sass/body/notTaskWindow.scss'
+import './notTaskWindow.scss'
 function NotTasks() {
   return (
     <div className="body--not-task">

@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../sass/body/button.scss'
+import './button.scss'
 
 function Button({ openModal, setOpenModal }) {
   const toggle = () => {
