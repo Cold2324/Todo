@@ -1,8 +1,6 @@
-import React from 'react'
-
-function InputSearch(props) {
+function InputSearch({ setSearchValue }) {
   const onSearchTask = (e) => {
-    props.setSearchValue(e.target.value)
+    setSearchValue(e.target.value)
   }
 
   return (

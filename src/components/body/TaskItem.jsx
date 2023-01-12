@@ -1,4 +1,3 @@
-import React from 'react'
 import deleteIcon from '../../assets/icons/delete.svg'
 import check from '../../assets/icons/check.svg'
 

@@ -1,7 +1,7 @@
-import React from 'react'
+import { useState } from 'react'
 import './createTask.scss'
 function CreateTask({ setOpenModal, onAdd }) {
-  const [textValue, setTextValue] = React.useState('')
+  const [textValue, setTextValue] = useState('')
 
   const onChangeText = (e) => {
     setTextValue(e.target.value)

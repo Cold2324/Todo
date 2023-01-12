@@ -1,4 +1,3 @@
-import React from 'react'
 import './button.scss'
 
 function Button({ openModal, setOpenModal }) {
