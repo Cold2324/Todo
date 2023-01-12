@@ -27,7 +27,6 @@
     "preview": "vite preview",
     "lint": "eslint --fix . --ext .js,.jsx",
     "format": "prettier --write .",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   }
 }
