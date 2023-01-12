@@ -1,5 +1,14 @@
-import React, { useState } from "react";
-import { Header, Body, TaskItem, InputSearch, NotTasks, Button, Modal, CreateTask } from './components/index'
+import React, { useState } from 'react'
+import {
+  Header,
+  Body,
+  TaskItem,
+  InputSearch,
+  NotTasks,
+  Button,
+  Modal,
+  CreateTask,
+} from './components/index'
 import useLocalStorage from './hooks/useLocalStorage'
 import { v4 as uuid } from 'uuid'
 
@@ -12,7 +21,7 @@ function App() {
   if (!searchValue.length >= 1) {
     searchedTasks = tasks
   } else {
-    searchedTasks = tasks.filter(task => {
+    searchedTasks = tasks.filter((task) => {
       const searchTextLower = searchValue.toLowerCase()
       const taskText = task.text.toLowerCase()
 
@@ -20,26 +29,26 @@ function App() {
     })
   }
 
-  const onCheck = id => {
-    const i = tasks.findIndex(task => task.id === id)
+  const onCheck = (id) => {
+    const i = tasks.findIndex((task) => task.id === id)
     const newTasks = [...tasks]
     newTasks[i].completed = !tasks[i].completed
     setTasks(newTasks)
   }
 
-  const onDelete = id => {
-    const i = tasks.findIndex(task => task.id === id)
+  const onDelete = (id) => {
+    const i = tasks.findIndex((task) => task.id === id)
     const newTasks = [...tasks]
     newTasks.splice(i, 1)
     setTasks(newTasks)
   }
 
-  const onAdd = text => {
+  const onAdd = (text) => {
     const newTasks = [...tasks]
     newTasks.push({
       id: uuid(),
-      text: text,
-      completed: false
+      text,
+      completed: false,
     })
     setTasks(newTasks)
   }
@@ -53,42 +62,32 @@ function App() {
           setSearchValue={setSearchValue}
         />
       </Header>
-      {
-        tasks.length === 0
-          ? <NotTasks />
-          : <Body>
-            <div className="body--tasks-containter">
-              {
-                searchedTasks.map(task => (
-                  <TaskItem
-                    key={task.id}
-                    task={task}
-                    onCheck={() => onCheck(task.id)}
-                    onDelete={() => onDelete(task.id)}
-                  />
-                ))
-              }
-            </div>
-          </Body>
-      }
+      {tasks.length === 0 ? (
+        <NotTasks />
+      ) : (
+        <Body>
+          <div className="body--tasks-containter">
+            {searchedTasks.map((task) => (
+              <TaskItem
+                key={task.id}
+                task={task}
+                onCheck={() => onCheck(task.id)}
+                onDelete={() => onDelete(task.id)}
+              />
+            ))}
+          </div>
+        </Body>
+      )}
 
-      {
-        !!openModal && (
-          <Modal>
-            <CreateTask
-              setOpenModal={setOpenModal}
-              onAdd={onAdd}
-            />
-          </Modal>
-        )
-      }
+      {!!openModal && (
+        <Modal>
+          <CreateTask setOpenModal={setOpenModal} onAdd={onAdd} />
+        </Modal>
+      )}
 
-      <Button
-        openModal={openModal}
-        setOpenModal={setOpenModal}
-      />
+      <Button openModal={openModal} setOpenModal={setOpenModal} />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

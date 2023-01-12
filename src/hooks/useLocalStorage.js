@@ -17,16 +17,13 @@ function useLocalStorage(name, initialValue) {
     setItem(parsedItems)
   }, [])
 
-  const saveItem = newItem => {
+  const saveItem = (newItem) => {
     const stringifiedItem = JSON.stringify(newItem)
     localStorage.setItem(name, stringifiedItem)
     setItem(newItem)
   }
 
-  return [
-    item,
-    saveItem
-  ]
+  return [item, saveItem]
 }
 
 export default useLocalStorage

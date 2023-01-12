@@ -4,7 +4,9 @@ import check from '../../assets/icons/check.svg'
 
 function TaskItem({ task, onCheck, onDelete }) {
   return (
-    <div className={!task.completed ? 'body--task-item' : 'body--task-item-check'} >
+    <div
+      className={!task.completed ? 'body--task-item' : 'body--task-item-check'}
+    >
       <p className="body--task-content">
         <img
           src={check}

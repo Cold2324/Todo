@@ -5,9 +5,7 @@ function Header({ children }) {
     <header>
       <div className="header--topbar"></div>
       <div className="header--search-container">
-        <div id="header--search-subcontainer">
-          {children}
-        </div>
+        <div id="header--search-subcontainer">{children}</div>
       </div>
     </header>
   )
